@@ -7,8 +7,9 @@
 #include "corne.dtsi"
 
 &kscan0 {
-    row-gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-    col-gpios = <&pro_micro 21 GPIO_ACTIVE_HIGH>;
+    diode-direction = "row2col";
+    row-gpios = <&pro_micro 5 GPIO_ACTIVE_HIGH>;
+    col-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 };
 &default_transform {
     rows = <1>;
